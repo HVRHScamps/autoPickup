@@ -13,7 +13,7 @@ def pickup(robot):
 def main(robot: libhousy.robot):
     #Here is where your recurring code will go
     if robot.controller.getAxis(robot.controller.Axis.lTrigger) > 0.8:
-        pickup()
+        pickup(robot)
 
     else:
         robot.pickupMotor.Set(0)

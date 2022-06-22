@@ -2,6 +2,7 @@ from tracemalloc import stop
 import libhousy
 #You can define helper functions here, make sure to but them *above* the main function
 def pickup(robot):
+    print("running pickup mode")
     robot.pickupMotor.Set(1)
     robot.pickupPneumatic.Extend()
     robot.beltZ1.Set(-0.8)

@@ -6,9 +6,9 @@ def pickup(robot):
     print("running pickup mode")
     robot.pickupMotor.Set(1)
     robot.pickupPneumatic.Extend()
-    robot.beltZ1(-0.8)
-    robot.beltZ2(0)
-    robot.beltZ3(0)
+    robot.beltZ1.Set(-0.8)
+    robot.beltZ2.Set(0)
+    robot.beltZ3.Set(0)
     robot.upperTension.retract()
     robot.lowerTension.retract()
 
@@ -20,8 +20,8 @@ def main(robot: libhousy.robot):
     else:
         robot.pickupMotor.Set(0)
         robot.pickupPneumatic.Retract()
-        robot.beltZ1(0)
-        robot.beltZ2(0)
-        robot.beltZ3(0)
+        robot.beltZ1.Set(0)
+        robot.beltZ2.Set(0)
+        robot.beltZ3.Set(0)
 
     # After everything is done, we tell the main program to stop us

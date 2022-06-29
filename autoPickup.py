@@ -9,8 +9,8 @@ def pickup(robot):
     robot.beltZ1.Set(-0.8)
     robot.beltZ2.Set(0)
     robot.beltZ3.Set(0)
-    robot.upperTension.retract()
-    robot.lowerTension.retract()
+    robot.upperTension.Retract()
+    robot.lowerTension.Retract()
 
 def main(robot: libhousy.robot):
     # Here is where your recurring code will go

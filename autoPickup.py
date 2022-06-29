@@ -4,7 +4,7 @@ import libhousy
 
 def pickup(robot):
     print("running pickup mode")
-    robot.pickupMotor.set(1)
+    robot.pickupMotor.Set(1)
     robot.pickupPneumatic.Extend()
     robot.beltZ1(-0.8)
     robot.beltZ2(0)
@@ -18,7 +18,7 @@ def main(robot: libhousy.robot):
         pickup(robot)
    
     else:
-        robot.pickupMotor.set(0)
+        robot.pickupMotor.Set(0)
         robot.pickupPneumatic.Retract()
         robot.beltZ1(0)
         robot.beltZ2(0)
